@@ -1,0 +1,91 @@
+.shell { min-height: 100vh; display: flex; flex-direction: column; }
+
+.demoBanner {
+  background: rgba(70, 217, 243, .08);
+  border-bottom: 1px solid var(--line);
+  padding: 10px 24px;
+  font-size: 13px;
+  color: var(--muted);
+  text-align: center;
+}
+.demaBannerLink, .demoBannerLink {
+  color: var(--cyan);
+  text-decoration: none;
+  font-weight: 700;
+}
+.demoBannerLink:hover { text-decoration: underline; }
+
+.body { flex: 1; display: flex; }
+
+.sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  background: var(--panel);
+  border-right: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 41px);
+  position: sticky;
+  top: 41px;
+}
+
+@media (max-width: 768px) {
+  .sidebar { display: none; }
+}
+
+.sidebarLogo {
+  padding: 20px 20px 16px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sideLogoLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+.sideLogoText { font-size: 16px; font-weight: 850; letter-spacing: -0.04em; color: var(--white); }
+.cyan { color: var(--cyan); }
+.sideAcctLabel { font-size: 11px; color: var(--muted); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+
+.sideLinks { list-style: none; padding: 12px 12px; display: flex; flex-direction: column; gap: 2px; }
+.sideLink {
+  display: block;
+  padding: 9px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: var(--muted);
+  text-decoration: none;
+  transition: all .15s;
+}
+.sideLink:hover { background: var(--panel2); color: var(--white); }
+
+.sideFooter { margin-top: auto; padding: 12px 12px 20px; border-top: 1px solid var(--line); }
+
+.main { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+
+.topbar {
+  height: 52px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  background: var(--panel);
+  position: sticky;
+  top: 41px;
+  z-index: 10;
+}
+
+.topbarLeft { }
+.topbarTitle { font-size: 13px; font-weight: 700; color: var(--muted); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; text-transform: uppercase; letter-spacing: .06em; }
+.topbarRight { display: flex; align-items: center; gap: 12px; }
+
+.bellBtn { background: none; border: none; color: var(--muted); cursor: pointer; padding: 4px; border-radius: 6px; transition: color .15s; }
+.bellBtn:hover { color: var(--white); }
+
+.content { padding: 32px 36px; flex: 1; }
+@media (max-width: 640px) { .content { padding: 24px 16px; } }

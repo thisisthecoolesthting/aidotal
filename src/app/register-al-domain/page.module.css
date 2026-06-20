@@ -1,0 +1,25 @@
+.page { padding: 80px 0 120px; }
+.header { display: flex; flex-direction: column; gap: 16px; margin-bottom: 64px; max-width: 680px; }
+.sub { font-size: 17px; color: var(--muted); line-height: 1.65; }
+
+.sections { display: flex; flex-direction: column; gap: 64px; }
+.section { max-width: 720px; display: flex; flex-direction: column; gap: 16px; }
+.section h2 { font-size: clamp(22px, 3vw, 34px); margin-bottom: 4px; }
+.section p { font-size: 15px; color: var(--muted); line-height: 1.65; }
+.section strong { color: var(--white); }
+
+.note { background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--lime); border-radius: 0 12px 12px 0; padding: 16px 20px; }
+.note p { font-size: 14px; }
+
+.processList { list-style: none; display: flex; flex-direction: column; gap: 20px; }
+.processItem { display: flex; gap: 16px; align-items: flex-start; }
+.processNum { font: 800 13px/1 ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--lime); background: rgba(185,255,79,.1); border: 1px solid rgba(185,255,79,.3); border-radius: 6px; padding: 4px 8px; flex-shrink: 0; }
+.processItem strong { color: var(--white); display: block; margin-bottom: 4px; }
+.processItem p { font-size: 14px; }
+
+.pricingLink { color: var(--cyan); text-decoration: none; font-weight: 700; }
+.pricingLink:hover { text-decoration: underline; }
+
+.searchSection { max-width: 860px; display: flex; flex-direction: column; gap: 16px; }
+.searchSection h2 { font-size: clamp(22px, 3vw, 34px); }
+.searchSub { font-size: 15px; color: var(--muted); }

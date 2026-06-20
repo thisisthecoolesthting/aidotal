@@ -1,0 +1,20 @@
+.page { padding: 80px 0 120px; }
+.header { display: flex; flex-direction: column; gap: 16px; margin-bottom: 48px; max-width: 680px; }
+.sub { font-size: 17px; color: var(--muted); line-height: 1.65; }
+.mainSearch { max-width: 860px; margin-bottom: 80px; }
+.sections { display: flex; flex-direction: column; gap: 64px; }
+.section { max-width: 720px; display: flex; flex-direction: column; gap: 16px; }
+.section h2 { font-size: clamp(22px, 3vw, 34px); margin-bottom: 4px; }
+.section p { font-size: 15px; color: var(--muted); line-height: 1.65; }
+.dimGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+@media (max-width: 640px) { .dimGrid { grid-template-columns: 1fr; } }
+.dimCard { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 22px; display: flex; flex-direction: column; gap: 8px; }
+.dimLabel { font-size: 15px; font-weight: 800; letter-spacing: -0.02em; }
+.dimDesc { font-size: 13px; color: var(--muted); line-height: 1.55; }
+.exampleCard { background: var(--panel); border: 1px solid var(--line); border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 16px; }
+.exampleTop { display: flex; align-items: baseline; gap: 16px; }
+.exampleDomain { font-size: 40px; font-weight: 900; letter-spacing: -0.05em; color: var(--white); }
+.exAl { color: var(--cyan); }
+.exampleScore { font: 800 24px/1 ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--lime); }
+.exampleDesc { font-size: 14px; color: var(--muted); line-height: 1.65; }
+.exampleDesc strong { color: var(--white); }

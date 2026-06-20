@@ -1,0 +1,47 @@
+.page { padding: 80px 0 120px; }
+.header { display: flex; flex-direction: column; gap: 16px; margin-bottom: 64px; max-width: 640px; }
+.sub { font-size: 17px; color: var(--muted); line-height: 1.65; }
+
+.tiersGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 80px; }
+@media (max-width: 1024px) { .tiersGrid { grid-template-columns: 1fr; } }
+
+.tier {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.tierHighlight { border-color: var(--lime); border-width: 2px; }
+.tierStudio { border-color: var(--cyan); }
+
+.tierHeader { display: flex; flex-direction: column; gap: 10px; }
+.tierNameRow { display: flex; align-items: center; gap: 10px; }
+.tierName { font: 700 12px/1 ui-monospace, SFMono-Regular, Menlo, monospace; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+.comingSoon { font: 700 10px/1 ui-monospace, SFMono-Regular, Menlo, monospace; text-transform: uppercase; letter-spacing: .06em; color: var(--cyan); border: 1px solid var(--cyan); border-radius: 999px; padding: 3px 8px; }
+.tierPrice { display: flex; align-items: baseline; gap: 4px; }
+.tierAmount { font-size: 48px; font-weight: 900; letter-spacing: -0.05em; }
+.tierPer { font-size: 16px; color: var(--muted); }
+.tierDesc { font-size: 14px; color: var(--muted); line-height: 1.55; }
+
+.tierList { list-style: none; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.tierItem { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--muted); }
+.check { color: var(--lime); font-weight: 700; flex-shrink: 0; }
+
+.disclosures { margin-bottom: 80px; }
+.disclosuresH2 { font-size: clamp(24px, 3vw, 38px); margin-bottom: 32px; }
+.disclosureGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+@media (max-width: 640px) { .disclosureGrid { grid-template-columns: 1fr; } }
+.disclosureItem { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 8px; }
+.disclosureItem h3 { font-size: 15px; font-weight: 800; letter-spacing: -0.02em; }
+.disclosureItem p { font-size: 13px; color: var(--muted); line-height: 1.55; }
+
+.faqSection { }
+.faqH2 { font-size: clamp(24px, 3vw, 38px); margin-bottom: 32px; }
+.faqGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+@media (max-width: 640px) { .faqGrid { grid-template-columns: 1fr; } }
+.faqItem { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 24px; }
+.faqQ { font-size: 16px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 8px; }
+.faqA { font-size: 14px; color: var(--muted); line-height: 1.6; }

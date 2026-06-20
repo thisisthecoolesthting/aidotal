@@ -1,0 +1,18 @@
+.page { display: flex; flex-direction: column; gap: 40px; }
+.h1 { font-size: clamp(24px, 4vw, 38px); }
+.section { display: flex; flex-direction: column; gap: 14px; }
+.sectionH2 { font-size: clamp(16px, 2.5vw, 22px); font-weight: 800; letter-spacing: -0.03em; }
+.planCard { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 24px; }
+.planInfo { display: flex; flex-direction: column; gap: 4px; }
+.planName { font-size: 17px; font-weight: 800; letter-spacing: -0.02em; }
+.planDesc { font-size: 14px; color: var(--muted); }
+.paymentCard { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 24px; display: flex; align-items: center; gap: 16px; }
+.noPayment { font-size: 14px; color: var(--muted); flex: 1; }
+.addPaymentForm { display: flex; flex-direction: column; gap: 12px; width: 100%; }
+.comingSoon { font-size: 14px; color: var(--muted); }
+.tableWrap { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+.table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.table th { text-align: left; padding: 12px 20px; font: 700 11px/1 ui-monospace, SFMono-Regular, Menlo, monospace; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); border-bottom: 1px solid var(--line); }
+.table td { padding: 14px 20px; border-bottom: 1px solid var(--line); }
+.table tr:last-child td { border-bottom: none; }
+.emptyRow { text-align: center; color: var(--muted); padding: 40px 20px !important; }

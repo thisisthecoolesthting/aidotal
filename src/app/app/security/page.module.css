@@ -1,0 +1,21 @@
+.page { display: flex; flex-direction: column; gap: 40px; }
+.h1 { font-size: clamp(24px, 4vw, 38px); }
+.section { display: flex; flex-direction: column; gap: 14px; }
+.sectionHeaderRow { display: flex; align-items: center; gap: 12px; }
+.sectionH2 { font-size: clamp(16px, 2.5vw, 22px); font-weight: 800; letter-spacing: -0.03em; }
+.comingSoon { font: 700 10px/1 ui-monospace, SFMono-Regular, Menlo, monospace; text-transform: uppercase; letter-spacing: .06em; color: var(--cyan); border: 1px solid var(--cyan); border-radius: 999px; padding: 3px 8px; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 16px; }
+.passwordForm { display: flex; flex-direction: column; gap: 14px; max-width: 400px; }
+.field { display: flex; flex-direction: column; gap: 6px; }
+.label { font: 700 11px/1 ui-monospace, SFMono-Regular, Menlo, monospace; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+.input { background: var(--panel2); border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px; font-size: 14px; color: var(--white); width: 100%; transition: border-color .15s; }
+.input:focus { outline: none; border-color: var(--cyan); }
+.input::placeholder { color: var(--muted); }
+.pwActions { display: flex; align-items: center; gap: 16px; }
+.doneMsg { font-size: 13px; color: var(--success); }
+.twoFaDesc { font-size: 14px; color: var(--muted); line-height: 1.55; }
+.sessionRow { display: flex; align-items: center; gap: 16px; justify-content: space-between; }
+.sessionInfo { display: flex; flex-direction: column; gap: 4px; }
+.sessionBrowser { font-size: 14px; font-weight: 700; }
+.sessionTime { font-size: 12px; color: var(--muted); }
+.divider { border: none; border-top: 1px solid var(--line); }

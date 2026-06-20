@@ -1,0 +1,45 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font: 700 11px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  background: var(--panel2);
+}
+
+.available {
+  color: var(--success);
+  border-color: var(--success);
+  background: rgba(142, 240, 176, 0.08);
+}
+
+.unavailable {
+  color: var(--danger);
+  border-color: var(--danger);
+  background: rgba(255, 107, 107, 0.08);
+}
+
+.checking {
+  color: var(--cyan);
+  border-color: var(--cyan);
+  background: rgba(70, 217, 243, 0.08);
+}
+
+.spinner {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border: 1.5px solid var(--cyan);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin .7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

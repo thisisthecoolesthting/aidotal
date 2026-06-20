@@ -1,0 +1,121 @@
+/* ── Hero ── */
+.hero { padding: 110px 0 80px; }
+.heroInner { display: flex; flex-direction: column; gap: 28px; }
+.eyebrowWrap { }
+.limeDot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--lime); }
+.heroH1 { max-width: 800px; }
+.cyAl { color: var(--cyan); }
+.heroSub { font-size: clamp(16px, 2vw, 20px); color: var(--muted); max-width: 600px; line-height: 1.6; }
+.searchWrap { max-width: 860px; }
+.microcopy { font-size: 12px; color: var(--muted); }
+
+/* ── Why .al ── */
+.whySection { padding: 100px 0; border-top: 1px solid var(--line); }
+.whySplit { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.whyLeft { display: flex; flex-direction: column; gap: 16px; }
+.whyRight { display: flex; flex-direction: column; gap: 20px; font-size: 17px; color: var(--muted); line-height: 1.65; }
+.guardrail { border-left: 3px solid var(--lime); padding-left: 20px; }
+.guardrail p { font-size: 14px; }
+
+/* ── Scoring ── */
+.scoringSection { padding: 100px 0; border-top: 1px solid var(--line); }
+.scoringH2 { margin: 12px 0 48px; max-width: 640px; }
+.dimGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.dimCard { background: var(--panel); border: 1px solid var(--line); border-radius: 22px; padding: 28px; display: flex; flex-direction: column; gap: 10px; }
+.dimNum { font: 800 11px/1 ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--cyan); text-transform: uppercase; letter-spacing: .1em; }
+.dimLabel { font-size: 18px; font-weight: 800; letter-spacing: -0.03em; }
+.dimDesc { font-size: 14px; color: var(--muted); line-height: 1.55; }
+
+/* ── How it works ── */
+.howSection { padding: 100px 0; border-top: 1px solid var(--line); }
+.howH2 { margin: 12px 0 48px; }
+.stepsGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.stepCard { background: var(--panel); border: 1px solid var(--line); border-radius: 22px; padding: 32px; display: flex; flex-direction: column; gap: 12px; }
+.stepNum { font: 800 12px/1 ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--lime); }
+.stepTitle { font-size: 20px; font-weight: 800; letter-spacing: -0.03em; }
+.stepBody { font-size: 15px; color: var(--muted); line-height: 1.6; }
+.howCta { margin-top: 40px; }
+
+/* ── DNS ── */
+.dnsSection { padding: 100px 0; border-top: 1px solid var(--line); }
+.dnsSplit { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.dnsLeft { display: flex; flex-direction: column; gap: 28px; }
+.dnsFeatures { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.dnsFeature { display: flex; align-items: center; gap: 12px; font-size: 15px; color: var(--muted); }
+.dnsDot { width: 6px; height: 6px; border-radius: 50%; background: var(--lime); flex-shrink: 0; }
+.dnsRight { }
+
+.terminal {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+}
+.terminalBar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--line);
+  background: var(--panel2);
+}
+.termDot { width: 10px; height: 10px; border-radius: 50%; }
+.termUrl { font: 400 12px/1 ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--muted); margin-left: 8px; }
+.terminalBody { padding: 20px 24px; display: flex; flex-direction: column; gap: 8px; }
+.termLine { font: 400 13px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; display: flex; gap: 12px; flex-wrap: wrap; }
+.termMuted { color: var(--muted); }
+.termType { color: var(--cyan); font-weight: 700; min-width: 52px; }
+.termName { color: var(--white); min-width: 60px; }
+.termVal { color: var(--success); }
+
+/* ── Pricing ── */
+.pricingSection { padding: 100px 0; border-top: 1px solid var(--line); }
+.pricingSplit { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.pricingLeft { display: flex; flex-direction: column; gap: 20px; }
+.pricingSub { font-size: 16px; color: var(--muted); line-height: 1.65; }
+
+.priceCard {
+  background: var(--panel);
+  border: 2px solid var(--lime);
+  border-radius: 24px;
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.priceTop { display: flex; align-items: baseline; gap: 6px; }
+.priceAmount { font-size: 64px; font-weight: 900; letter-spacing: -0.05em; color: var(--white); }
+.pricePer { font-size: 18px; color: var(--muted); }
+.priceList { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.priceItem { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--muted); }
+.checkMark { color: var(--lime); font-weight: 700; flex-shrink: 0; }
+.priceNote { font-size: 12px; color: var(--muted); line-height: 1.5; }
+
+/* ── FAQ ── */
+.faqSection { padding: 100px 0; border-top: 1px solid var(--line); }
+.faqH2 { margin: 12px 0 48px; }
+.faqGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.faqItem { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 10px; }
+.faqQ { font-size: 17px; font-weight: 800; letter-spacing: -0.02em; }
+.faqA { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+/* ── Final CTA ── */
+.ctaSection { padding: 100px 0; border-top: 1px solid var(--line); }
+.ctaBox { display: flex; flex-direction: column; gap: 24px; max-width: 860px; }
+.ctaH2 { }
+.ctaSub { font-size: 17px; color: var(--muted); line-height: 1.65; }
+.ctaSearch { }
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .dimGrid { grid-template-columns: repeat(2, 1fr); }
+  .whySplit, .dnsSplit, .pricingSplit { grid-template-columns: 1fr; gap: 40px; }
+  .stepsGrid { grid-template-columns: 1fr; }
+  .faqGrid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .hero { padding: 80px 0 60px; }
+  .dimGrid { grid-template-columns: 1fr; }
+  .priceAmount { font-size: 48px; }
+}

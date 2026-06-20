@@ -1,0 +1,24 @@
+.page { min-height: 80vh; display: flex; align-items: center; justify-content: center; padding: 40px 24px; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 24px; padding: 48px; width: 100%; max-width: 420px; display: flex; flex-direction: column; gap: 24px; align-items: center; }
+.logo { }
+.h1 { font-size: 26px; font-weight: 850; letter-spacing: -0.04em; text-align: center; }
+.form { display: flex; flex-direction: column; gap: 16px; width: 100%; }
+.field { display: flex; flex-direction: column; gap: 6px; }
+.label { font: 700 11px/1 ui-monospace, SFMono-Regular, Menlo, monospace; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+.input { background: var(--panel2); border: 1px solid var(--line); border-radius: 10px; padding: 12px 16px; font-size: 15px; color: var(--white); width: 100%; transition: border-color .15s; }
+.input:focus { outline: none; border-color: var(--cyan); }
+.input::placeholder { color: var(--muted); }
+.forgotRow { display: flex; justify-content: flex-end; }
+.forgotLink { font-size: 13px; color: var(--muted); text-decoration: none; }
+.forgotLink:hover { color: var(--white); }
+.createLink { font-size: 13px; color: var(--muted); text-align: center; }
+.link { color: var(--cyan); text-decoration: none; font-weight: 700; }
+.loadingState { display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 24px 0; color: var(--muted); font-size: 15px; }
+.spinner { display: inline-block; width: 28px; height: 28px; border: 3px solid var(--line); border-top-color: var(--cyan); border-radius: 50%; animation: spin .7s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.waitlist { display: flex; flex-direction: column; gap: 16px; width: 100%; }
+.waitlistNote { font-size: 14px; color: var(--muted); line-height: 1.55; text-align: center; }
+.waitlistForm { display: flex; flex-direction: column; gap: 12px; }
+.waitlistDone { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 16px 0; }
+.doneIcon { width: 36px; height: 36px; border-radius: 50%; background: var(--success); color: #071008; font-size: 18px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+.waitlistDone p { font-size: 14px; color: var(--muted); text-align: center; }
