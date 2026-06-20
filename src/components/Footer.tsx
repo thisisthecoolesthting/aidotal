@@ -63,7 +63,7 @@ export default function Footer() {
       </div>
 
       <div className={styles.bottom}>
-        <p className={styles.copy}>&copy; 2025 AIDotAL &middot; AI-ranked .al domain discovery.</p>
+        <p className={styles.copy}>&copy; {new Date().getFullYear()} AIDotAL &middot; AI-ranked .al domain discovery.</p>
       </div>
     </footer>
   );

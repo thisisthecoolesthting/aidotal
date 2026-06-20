@@ -41,9 +41,13 @@ Return ONLY valid JSON — no markdown, no explanation. Format:
   ]
 }`;
 
+// Latest Opus by default; overridable via env so the deployed SDK/account
+// can pin a known-good model without a code change.
+const MODEL = process.env.ANTHROPIC_MODEL ?? 'claude-opus-4-5';
+
 export async function generateCandidates(brief: string): Promise<Candidate[]> {
   const message = await client.messages.create({
-    model: 'claude-opus-4-5',
+    model: MODEL,
     max_tokens: 2048,
     system: SYSTEM,
     messages: [
@@ -54,14 +58,25 @@ export async function generateCandidates(brief: string): Promise<Candidate[]> {
     ],
   });
 
-  const text = message.content[0].type === 'text' ? message.content[0].text : '';
+  // Find the first text block — content[0] is not guaranteed to be text.
+  const textBlock = message.content.find(block => block.type === 'text');
+  const text = textBlock && textBlock.type === 'text' ? textBlock.text : '';
+  if (!text) {
+    throw new Error('Empty response from model.');
+  }
 
-  // Strip any markdown code fences
+  // Strip any markdown code fences, then isolate the JSON object.
   const cleaned = text.replace(/```json\n?/g, '').replace(/```\n?/g, '').trim();
+  const start = cleaned.indexOf('{');
+  const end = cleaned.lastIndexOf('}');
+  const json = start !== -1 && end !== -1 ? cleaned.slice(start, end + 1) : cleaned;
 
-  const parsed = JSON.parse(cleaned) as { candidates: Candidate[] };
+  const parsed = JSON.parse(json) as { candidates?: unknown };
+  if (!Array.isArray(parsed.candidates)) {
+    throw new Error('Model response did not contain a candidates array.');
+  }
 
-  return parsed.candidates.map(c => ({
+  return (parsed.candidates as Candidate[]).map(c => ({
     ...c,
     availability: 'demo' as const,
     checkedAt: new Date().toISOString(),

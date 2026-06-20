@@ -1,5 +1,12 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import styles from './layout.module.css';
+
+export const metadata: Metadata = {
+  title: 'Account Preview',
+  description: 'AIDotAL account preview — domains, DNS, billing, and security. Account features are in early access.',
+  robots: { index: false, follow: false },
+};
 
 const SIDEBAR_LINKS = [
   { href: '/app/dashboard', label: 'Dashboard' },
